@@ -15,6 +15,7 @@ import {
 } from "@/lib/styles";
 
 const PUBLIC_NAV_LINKS = [
+  { href: "/stats", label: "Stats" },
   { href: "/faq", label: "FAQ" },
   { href: "/help", label: "Help" },
 ];
@@ -78,7 +79,7 @@ export function Navbar(): React.JSX.Element {
     setIsMobileMenuOpen(false);
   }
 
-  const navLinks = isAuthenticated
+  const navLinks = mounted && isAuthenticated
     ? [{ href: "/app/dashboard", label: "Dashboard" }, ...PUBLIC_NAV_LINKS]
     : PUBLIC_NAV_LINKS;
 
