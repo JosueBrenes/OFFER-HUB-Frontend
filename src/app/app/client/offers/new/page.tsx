@@ -170,6 +170,40 @@ export default function CreateOfferPage(): React.JSX.Element {
         </div>
       </div>
 
+      <div className={cn(NEUMORPHIC_CARD, "p-5 border-l-4 border-primary")}>
+        <div className="flex flex-col md:flex-row md:items-center gap-6">
+          <div className="flex-1 space-y-2">
+            <div className="flex items-center gap-2 text-primary">
+              <Icon path={ICON_PATHS.infoCircle} size="md" className="text-primary shrink-0" />
+              <h2 className="text-base font-bold text-text-primary">What is an Offer?</h2>
+            </div>
+            <p className="text-xs text-text-secondary leading-relaxed max-w-xl">
+              An offer is a job post where you describe a task or project you need completed. Freelancers will browse your offer and apply with a proposal. You review applicants and choose who to hire.
+            </p>
+          </div>
+          <div className="w-full md:w-auto shrink-0 border-t md:border-t-0 md:border-l border-border-light/80 pt-4 md:pt-0 md:pl-6 space-y-2">
+            <div className="flex items-center gap-2.5 text-xs text-text-secondary">
+              <Icon path={ICON_PATHS.document} size="sm" className="text-primary shrink-0" />
+              <span>
+                <strong className="text-text-primary">Describe the task clearly</strong> — title, description, budget, and deadline
+              </span>
+            </div>
+            <div className="flex items-center gap-2.5 text-xs text-text-secondary">
+              <Icon path={ICON_PATHS.users} size="sm" className="text-primary shrink-0" />
+              <span>
+                <strong className="text-text-primary">Receive proposals</strong> from qualified freelancers
+              </span>
+            </div>
+            <div className="flex items-center gap-2.5 text-xs text-text-secondary">
+              <Icon path={ICON_PATHS.check} size="sm" className="text-primary shrink-0" />
+              <span>
+                <strong className="text-text-primary">Accept the best proposal</strong> and start the project
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <form onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
           <div className="xl:col-span-2 space-y-6">
